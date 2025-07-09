@@ -1,13 +1,23 @@
+/* universal selector */
 *{
     color: red;
 }
 
 
+
+/* element selector */
 h1{
     color: red;
 }
 
 
+
+/* id- selector */
 #heading4{
     color: blue;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start; /* aligns to left */
 }

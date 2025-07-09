@@ -1,6 +1,13 @@
 /* extrnal stylesheet*/
 h1{
     color: red;
+    text-align: center;
+}
+img{
+    
+    height: 100px;
+    object-fit: cover;
+    float: right;   
 }
 button{
     background-color: rgb(142, 142, 216);
@@ -9,4 +16,8 @@ button{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+  #box1 {
+    
+   
 }
