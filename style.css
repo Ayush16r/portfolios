@@ -2,22 +2,58 @@
 h1{
     color: red;
     text-align: center;
+    text-decoration: underline;
 }
 img{
-    
     height: 100px;
     object-fit: cover;
     float: right;   
 }
-button{
+/* button{
     background-color: rgb(142, 142, 216);
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+} */
+  #box {
+   position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  padding: 0px;
+   
 }
   #box1 {
-    
+   position: relative;
+   width: 100%;
+   padding: 0px;
+   min-height: 100px;
+   background-color: #ffffff;
+ 
    
+}
+.butn{
+  position: absolute;
+  bottom: 10px;
+  left: 100px;
+   margin: 0;   
+   display: block;  
+   background-color: #0d0202;
+}
+.butn button {
+  background-color: rgb(19, 19, 87);
+  color: rgb(139, 42, 42);
+  padding: 10px 20px;
+ 
+ 
+}
+
+button {
+  background-color: rgb(222, 227, 189);
+  color: rgb(5, 83, 104);
 }
