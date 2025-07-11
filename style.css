@@ -376,6 +376,24 @@ button {
   border-radius: 5px;
   border-color: #b1c70f;
 }
+#sbd1{
+  
+  position: absolute;
+  top: 410px;
+  left: 0px;
+  background-color:#a8acb3;
+  padding: 20px;
+  border-radius: 10px;
+  width: 1135px;
+  height: 170px;
+}
+
+
+/* #a8acb3 */
+
+
+
+
 
 
 
