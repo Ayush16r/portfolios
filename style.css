@@ -53,7 +53,7 @@ body {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 200px;
+  width: 180px;
   background-color: #f1f1f1; /* Light background for the search input */
   color: #333; /* Dark text for better contrast */
   font-size: 14px; /* Slightly larger font for readability */
@@ -76,6 +76,21 @@ button {
   margin-left: 550px;
   right:1000px;
 }
+#acn {
+  text-decoration: none;
+  color: #828487;  /* Default text color */
+  font-weight: bold;
+  font-size: 20px;  /* Smaller font size */
+  transition: all 0.3s ease;
+}
+
+#acn:hover {
+  color: #686939;              /* Darker on hover */
+ /* Optional */
+  font-size: 1.05em;           /* Slight zoom */
+  cursor: pointer;
+}
+
 
 
 h1{

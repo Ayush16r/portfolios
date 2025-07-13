@@ -1,0 +1,262 @@
+body{
+    background-color: black;
+}
+#navbar{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    margin-top: 10px;
+    background-color: black;
+    top: 100px;
+    padding: 10px;
+    width: 1350px;
+    font-size: 10px;
+    line-height: 5px;
+    
+}
+h1{
+    color: whitesmoke;
+    font-size: 10pz;
+}
+#homeimg{
+    height: 40px;
+    width: 40px;
+    left: 10px;
+}
+#homeicon{
+    position: absolute;
+    top: 30px;
+    right: 80px;
+}
+
+#infobox{
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 1300px;
+    height: 350px;
+    background-color: rgb(95, 182, 99);
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+#studyimage{
+    position: absolute;
+    top: 110px;
+    left: 1040px;
+    width: 320px;
+    height: 320px;
+    border-radius: 25px;
+}
+#info-text{
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    width: 500px;
+    height: 70px;
+    font-size: 35px;
+    line-height: 30px;
+    color: rgb(64, 68, 60);
+}
+/* From Uiverse.io by Spacious74 */ 
+.button {
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 16px;
+  border: none;
+  padding: 2px;
+  background: radial-gradient(circle 80px at 80% -10%, #ffffff, #181b1b);
+  position: relative;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 60%;
+  border-radius: 120px;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 20px #ffffff38;
+  z-index: -1;
+}
+
+.blob1 {
+  position: absolute;
+  width: 70px;
+  height: 100%;
+  border-radius: 16px;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #3fe9ff,
+    #0000ff80,
+    transparent
+  );
+  box-shadow: -10px 10px 30px #0051ff2d;
+}
+
+.inner {
+  padding: 14px 25px;
+  border-radius: 14px;
+  color: #fff;
+  z-index: 3;
+  position: relative;
+  background: radial-gradient(circle 80px at 80% -50%, #777777, #0f1111);
+}
+.inner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 14px;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #00e1ff1a,
+    #0000ff11,
+    transparent
+  );
+  position: absolute;
+}
+
+#info01{
+    position: absolute;
+    top: 600px;
+    left: 80px;
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    border-radius: 25px;
+}
+/* From Uiverse.io by eirikvold */ 
+button {
+  font-family: inherit;
+  font-size: 18px;
+  background: linear-gradient(to bottom, #4dc7d9 0%,#66a6ff 100%);
+  color: white;
+  padding: 0.8em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+button svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+button .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+
+button:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:hover svg {
+  transform: rotate(45deg);
+}
+
+
+
+
+/* couce */
+
+#cources {
+    position: absolute;
+    top:710px;
+    left: 100px;
+    width: 1300px;
+    height: 180px;
+    background-color: rgb(95, 182, 99);
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    border-radius: 25px;
+    display: flex;
+    gap: 20px; ;
+}
+.course-item {
+    position: relative;
+    display: flex;
+    top:0px;
+    left: 2x;
+    width: 220px;
+    height: 180px;
+    background-color: rgb(171, 109, 78);
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2px;
+    border-radius: 25px;
+}
+
+#menu-box {
+    position: absolute;
+    top: 950px;
+    left: 100px;
+    width: 1300px;
+    height: 230px;
+    background-color: rgb(95, 182, 99);
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    border-radius: 25px;
+}
+#attendance-butoom {
+    position: absolute;
+    top: 1240px;
+    left: 100px;
+    width: 200px;
+    height: 80px;
+    background-color: rgb(179, 20, 20);
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+}
+#attendance-box {
+    position: absolute;
+    top: 1340px;
+    left: 100px;
+    width: 1350px;
+    height: 390px;
+    background-color:whitesmoke;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    border-radius: 25px;
+}
