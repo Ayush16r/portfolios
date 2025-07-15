@@ -21,12 +21,17 @@ h1{
     height: 40px;
     width: 40px;
     left: 10px;
+    border: #3fe9ff;
 }
 #homeicon{
     position: absolute;
     top: 30px;
-    right: 80px;
+    background-color: #d00614;
+    
+    border-radius: 45%;
+    right: 90px;
 }
+
 
 #infobox{
     position: absolute;
@@ -203,7 +208,7 @@ button:hover svg {
     left: 100px;
     width: 1300px;
     height: 180px;
-    background-color: rgb(95, 182, 99);
+    background-color:black;
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 20px;
@@ -224,6 +229,25 @@ button:hover svg {
     padding: 2px;
     border-radius: 25px;
 }
+#cc{
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    width: 90px;
+    height: 90px;
+}
+#java{
+    position: absolute;
+    top: 140px;
+    left: 80px;
+    width: 100px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    font-size: 12px;
+}
+
 
 #menu-box {
     position: absolute;
@@ -231,7 +255,7 @@ button:hover svg {
     left: 100px;
     width: 1300px;
     height: 230px;
-    background-color: rgb(95, 182, 99);
+    background-color:whitesmoke;
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 20px;
@@ -239,18 +263,18 @@ button:hover svg {
 }
 #attendance-butoom {
     position: absolute;
-    top: 1240px;
+    top: 1250px;
     left: 100px;
     width: 200px;
     height: 80px;
-    background-color: rgb(179, 20, 20);
+    background-color: rgb(0, 0, 0);
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 0px;
 }
 #attendance-box {
     position: absolute;
-    top: 1340px;
+    top: 1330px;
     left: 100px;
     width: 1350px;
     height: 390px;
@@ -260,3 +284,63 @@ button:hover svg {
     padding: 0px;
     border-radius: 25px;
 }
+/* From Uiverse.io by eirikvold */ 
+button {
+  font-family: inherit;
+  font-size: 18px;
+  background: linear-gradient(to bottom, #4dc7d9 0%,#66a6ff 100%);
+  color: white;
+  padding: 0.8em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+button svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+button .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+
+button:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:hover svg {
+  transform: rotate(45deg);
+}
+
+

@@ -12,7 +12,13 @@ body {
   background-color: #262927;  /* ✅ dark background globally */
   color: white;
 }
+h1{
+    color: red;
+    text-align: center;
+    text-decoration: underline;
+}
 
+                                                         /* navbar  */
 #navbar {
   background-color: #262926;
   display: flex;
@@ -42,24 +48,24 @@ body {
   margin: 0;
   text-decoration: none;
 }
-
 #head1 {
   color: white;
   font-size: 12px;
   margin: 0;
 }
+
 #search{
-  margin-left: 400px;
+  margin-left: 300px;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 180px;
-  background-color: #f1f1f1; /* Light background for the search input */
-  color: #333; /* Dark text for better contrast */
-  font-size: 14px; /* Slightly larger font for readability */
+  width: 380px;
+  background-color: #f1f1f1; 
+  color: #333; 
+  font-size: 15px; 
   transition: background-color 0.3s ease; /* Smooth transition for background color */
   outline: none; /* Remove default outline */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 }
 button {
@@ -71,38 +77,16 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
-#acn{
-  color: white;
-  margin-left: 550px;
-  right:1000px;
-}
-#acn {
-  text-decoration: none;
-  color: #828487;  /* Default text color */
-  font-weight: bold;
-  font-size: 20px;  /* Smaller font size */
-  transition: all 0.3s ease;
-}
-
-#acn:hover {
-  color: #686939;              /* Darker on hover */
- /* Optional */
-  font-size: 1.05em;           /* Slight zoom */
-  cursor: pointer;
+#homeimg{                                                      /*  NAVBAR LOGIN ICON IMAGE CODE  */
+  position: relative;
+    height: 40px;
+    width: 40px;
+    left: 500px;
+    border: 2px solid #b1c70f;
+    border-radius: 50%;
 }
 
 
-
-h1{
-    color: red;
-    text-align: center;
-    text-decoration: underline;
-}
-/* img{
-    height: 100px;
-    object-fit: cover;
-    float: right;   
-} */
 
 
 
@@ -322,11 +306,8 @@ button {
   padding: 20px;
   border-radius: 10px;
   width: 1135px;
-  height: 580px;
-   /* NEW FLEX STYLING */
-  
+  height: 580px;  
   gap: 20px;
- 
   color: blue;
 
 }
@@ -421,34 +402,6 @@ button {
 
 /* #a8acb3 */
 
-
-
-
-/* 
-#accdimg {
-
-  position: absolute;
-  top: 0px;
-  left: 5px;
-  background-color: #2cc96a;
-  padding: 20px;
-  border-radius: 10px;
-  width: 340px;
-  height: 180px;
-}
-#accdimg1 {
-  max-width: 100%;
-
-  width: 112%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-  margin: 0 a0uto; 
-}
-
- */
-
  #accdimg {
   margin: 0px;
   top: 50px;
@@ -536,20 +489,19 @@ button {
  
 }
 .projectskill {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
- display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     color: rgb(250, 243, 243);
     font-size: 12px;
     background-color: rgb(93, 69, 25);
     padding: 0px 10px;
     border-radius: 20px;
     border: 1px solid rgba(178, 215, 66, 0.926); 
-      height: 35px;               /* Add height to help with vertical centering */
-
-      line-height: 1;             /* Tighter vertical spacing */
+    height: 35px;               /* Add height to help with vertical centering */
+    line-height: 1;             /* Tighter vertical spacing */
 
 } 
 .skill-link {
@@ -569,7 +521,7 @@ button {
 }
 
 .skill-link:hover {
-  color: #b1c70f;  /* Optional hover effect */
+  color: #0f37c7;  /* Optional hover effect */
   text-decoration: underline;
 }
 
@@ -794,6 +746,5 @@ button {
   width: 350px;
  
 }
-
 
 
