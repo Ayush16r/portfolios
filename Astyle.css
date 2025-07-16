@@ -247,6 +247,28 @@ button:hover svg {
     padding: 0px;
     font-size: 12px;
 }
+#java1{
+    position: absolute;
+    top: 140px;
+    left: 59px;
+    width: 100px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    font-size: 12px;
+}
+#java2{
+    position: absolute;
+    top: 140px;
+    left: 90px;
+    width: 100px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    font-size: 12px;
+}
 
 
 #menu-box {

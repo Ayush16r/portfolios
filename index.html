@@ -6,7 +6,181 @@
     <title>Soa ITER</title>
     <link rel="stylesheet" href="style.css">
 </head>
+ <style>
+    /* Quick Responsive Fixes */
 
+    @media (max-width: 768px) {
+
+      #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      #head {
+        position: absolute;
+        top: 31px;
+
+        left: 120px;
+        gap: 10px;
+        font-size: 10px;
+        margin-left: 10px;
+      }
+            #head1 {
+        position: absolute;
+        top: 43px;
+
+        left: 80px;
+        gap: 10px;
+        font-size: 10px;
+        margin-left: 10px;
+      }
+
+      #search {
+        width: 80%;
+        margin-left: 0;
+        margin-top: 10px;
+      }
+      #search-btn {
+        position: absolute;
+        left: 78%;
+        top: 70px;
+        width: 20%;
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      #homeimg {
+        position: absolute;
+        left: 82%;
+        top: 10px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+
+      .social-sidebar,
+      .home-sidebar,
+      #party {
+        display: none;
+      }
+
+      #context,
+      #sbox1,
+      #sbox2,
+      #sbox3,
+      #sbox4,
+      #sbox5 {
+        position: relative !important;
+        top: auto !important;
+        width: 90% !important;
+        left: 0 !important;
+        margin: 15px;
+        gap: 10px;
+      }
+      #context {
+        top: auto;
+        height: auto !important;
+        padding: 10px;
+        font-size: 14px;
+      }
+      #thought-box {
+        width: 100% !important;
+        height: auto !important;
+        padding: 10px;
+        font-size: 14px;
+      }
+        #sbox4 {
+        position: relative !important;
+        top: auto !important;
+        width: 90% !important;
+        left: 0 !important;
+        margin:30px auto;
+        gap: 10px;
+      }
+        #sbox5 {
+        position: relative !important;
+        top: auto !important;
+        width: 90% !important;
+        left: 0 !important;
+        margin: auto;
+        gap: 10px;
+        height: 105px;
+      }
+
+
+      #sbd3,
+      #sbd2,
+      
+      #sbd4,
+      #sbd1 {
+        position: relative !important;
+        width: 100% !important;
+        left: 0 !important;
+        top: auto !important;
+        margin-bottom: 10px;
+      }
+      #sbd3 {
+        top: 80%;
+        bottom: 520px;
+        position: absolute !important;
+        width: 100% !important;
+        left: 0 !important;
+        
+        margin-bottom: 10px;
+      }
+      #sbd2 {
+        top: 10px;
+        bottom: 170px;
+        position: absolute !important;
+        height: auto !important;
+        width: auto !important;
+        left: 10px !important;
+        
+        margin-bottom: 10px;
+      }
+       #sbd1 {
+        top: 110px;
+        bottom: 0px;
+        position: absolute !important;
+        height: 33% !important;
+        width: 100% !important;
+        left: 0px !important;
+        
+        margin-bottom: 0px;
+      }
+
+      #imgsb5,
+      #accdimg1,
+      #evnimg1,
+      #hosimg1 {
+        width: 100% !important;
+        height: auto !important;
+      }
+      
+      .projectskill,
+      .skill-link {
+        position: relative;
+        gap: 15px;
+        flex: 11;
+        font-size: 12px;
+      }
+      
+      #sbox1-heading1,#sbox1-heading2,#sbox1-heading3,#sbox1-heading{
+        width: 100% !important;
+      }
+         #sbox2-heading1,#sbox2-heading2,#sbox2-heading3,#sbox2-heading{
+        width: 100% !important;
+      }
+         #sbox3-heading1,#sbox3-heading2,#sbox3-heading3,#sbox3-heading{
+        width: 100% !important;
+      }
+
+      #codebtn {
+        width: 320% !important;
+      }
+
+    }
+    
+
+  </style>
 
 <body>
 
@@ -21,7 +195,7 @@
        </div>
                    
          <input type="text" placeholder="Search..." id="search">
-         <button>search</button>
+         <button id="search-btn">search</button>
          <a href="login.html"> <img id="homeimg" src="logos/user.png" alt="Home"> </a>
   </div>
 <br>
@@ -122,15 +296,17 @@
                                                                     
                                                           <!-- container for the contact me -->
      <div id="sbox4">                           
-      <div id="sbd2">
+     
+      
+      
+      <div id="sbd4" >  <img id="imgsb5" src="workimg.jpeg" alt=""> </div>
+       <div id="sbd2">
            <p3 id="htext2">I am a professional web developer, offering my expertise in creating dynamic and responsive websites with a focus on statistical data. My skills encompass advanced web development techniques </p3>
         <br>
         <br>
         <button id="btn6">Contact Me</button>
       </div>
-      
       <div id="sbd3"> <h2 id="htext1">Create Your Own Web page</h2> </div>
-      <div id="sbd4" >  <img id="imgsb5" src="workimg.jpeg" alt=""> </div>
       
       <div id="sbd1"> </div>
        
