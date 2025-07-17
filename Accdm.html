@@ -6,6 +6,149 @@
     <title>ACCEDMICS</title>
     <link rel="stylesheet" href="Astyle.css">
 </head>
+
+<style>
+  @media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+  }
+
+  #homeimg {
+    position: absolute;
+    top: 6px;
+    left: 30px;
+   
+    display: block;
+  }
+
+  #infobox {
+    top: 30%;
+    left: 5.5%;
+    width: 80%;
+    text-align: center;
+  }
+  #info-text {
+    font-size: 200%;
+    top: 20%;
+    left: 5%;
+    width: 300px;
+    text-align: center;
+  }
+    #studyimage {
+    font-size: 200%;
+    top: 31%;
+    left: 5%;
+    width: 300px;
+    text-align: center;
+  }
+
+
+
+  #search, #search-btn {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .button,
+  #info01 button {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+    font-size: 14px;
+  }
+
+  #info01{
+    position: absolute;
+    left: 1px;
+    width: 45%;
+  }
+  #svg-wrapper-1{
+    position: relative;
+    left: 1px;
+    width: 1px;
+  }
+
+  
+
+  
+
+ 
+
+  .course-item h1 {
+    font-size: 16px;
+  }
+#cources {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  flex-direction: row-reverse; /* THIS makes it scroll from right to left */
+  gap: 12px;
+  padding: 10px;
+  left: 20px;
+  width: 85%;
+  -webkit-overflow-scrolling: touch;
+  background-color: whitesmoke;
+  
+    align-items: center;
+}
+
+#cources::-webkit-scrollbar {
+  display: none;
+}
+
+.course-item {
+ 
+  width: 200px;
+  flex-shrink: 0;
+  
+  
+  color: white;
+  text-align: center;
+}
+#java{
+  left: 40px;
+}
+#java2{
+  left: 40px;
+}
+
+#cc {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+  #menu-box,
+  #attendance-box {
+    width: 85%;
+    left: 5%;
+    
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #attendance-butoom  {
+    width: 90%;
+    left: 5%;
+    top: 174%;
+    margin: 10px auto;
+    font-size: 14px;
+  }
+
+  /* Optional: Fix overlapping */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+  </style>
+
+
 <body>
 
     <div id="navbar"> 
@@ -48,12 +191,12 @@
 </div>
 
 <div id="cources"> 
-    <div class="course-item" style="background-color: #a3ddffb7;"> <img id="cc" src="logos/codingicon.png" alt=""><br> <h1 id="java">JAVA</h1></div>
+    
     <div class="course-item" style="background-color: #FB245DE0;"><img id="cc" src="logos/calculating.png" alt=""><br><h1 id="java1">DISCRETE MATH</h1></div>
     <div class="course-item" style="background-color: #D19EFE"><img id="cc" src="logos/relativity.png" alt=""><br>  <h1 id="java">PHYSICS</h1></div>
     <div class="course-item" style="background-color: #a3ddffb7;"><img id="cc" src="logos/calculus.png" alt=""><br>  <h1 id="java">CALCULUS</h1></div>
     <div class="course-item" style="background-color: #6a55f5;"><img id="cc" src="logos/uhv.png" alt=""><br>  <h1 id="java2">UHV</h1></div>
-    
+    <div class="course-item" style="background-color: #a3ddffb7;"> <img id="cc" src="logos/codingicon.png" alt=""><br> <h1 id="java">JAVA</h1></div>
   </div>
 
 <div id="menu-box"> hello</div>
