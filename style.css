@@ -138,6 +138,7 @@ button {
 }
 
 
+
 #party{
   position: fixed;
   background-color: #383d3a;
@@ -168,6 +169,7 @@ button {
 
 .social-sidebar ul {
   list-style: none;
+
   padding: 0;
 }
 
