@@ -197,7 +197,14 @@ button:hover svg {
   transform: rotate(45deg);
 }
 
-
+#sem-select{
+  position: relative;
+  width: 50px;
+  left: 10px;
+  color: red;
+  text-decoration-color:red ;
+  border-radius: 20px;
+}
 
 
 /* couce */
@@ -214,20 +221,27 @@ button:hover svg {
     padding: 20px;
     border-radius: 25px;
     display: flex;
-    gap: 20px; ;
+    gap: 50px; ;
 }
 .course-item {
     position: relative;
-    display: flex;
+    
     top:0px;
-    left: 2x;
-    width: 220px;
+    left: 2px;
+    width: 180px;
     height: 180px;
+    gap: 100px;
+    flex-wrap: wrap;
     background-color: rgb(171, 109, 78);
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 2px;
+    padding-left: 2px;
     border-radius: 25px;
+    
+}
+.course-item:hover{
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
 }
 #cc{
     position: absolute;
