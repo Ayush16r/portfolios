@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login Page</title>
   <link rel="stylesheet" href="login.css" />
+
+  <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 </head>
@@ -12,55 +14,129 @@
   <div id="login">
     <div class="container">
       <div class="heading">Sign In</div>
-      <form action="" class="form">
-        <input required class="input" type="email" name="email" id="email" placeholder="E-mail" />
-        <input required class="input" type="password" name="password" id="password" placeholder="Password" />
+
+      <!-- Email + Password Login -->
+      <form onsubmit="loginWithEmail(event)" class="form">
+        <input required class="input" type="email" id="email" placeholder="E-mail" />
+        <input required class="input" type="password" id="password" placeholder="Password" />
         <span class="forgot-password"><a href="#">Forgot Password ?</a></span>
         <input class="login-button" type="submit" value="Sign In" />
       </form>
 
+      <!-- Google Login -->
       <div class="social-account-container">
         <span class="title">Or Sign in with</span>
         <div class="social-accounts">
-          <button class="social-button google" onclick="signInWithGoogle()">
-            <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 488 512">
-              <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path>
-            </svg>
-          </button>
+          <button class="social-button google" onclick="signInWithGoogle()">Google</button>
         </div>
       </div>
+
+      <!-- Phone Number + OTP Login -->
+      <div style="margin-top:20px;">
+        <span class="title">Or Sign in with Phone</span><br><br>
+        <input type="tel" id="phoneNumber" placeholder="+919876543210" />
+        <!-- Invisible reCAPTCHA container (hidden) -->
+        <div id="recaptcha-container" style="display:none;"></div>
+        <button onclick="sendOTP()">Send OTP</button>
+
+        <div id="otpSection" style="display:none; margin-top:10px;">
+          <input type="text" id="otpCode" placeholder="Enter OTP" />
+          <button onclick="verifyOTP()">Verify OTP</button>
+        </div>
+      </div>
+
       <span class="agreement"><a href="#">Learn user licence agreement</a></span>
     </div>
   </div>
 
-  <!-- Firebase + Google Auth Script -->
+  <!-- Firebase Script -->
   <script>
-    // TODO: Replace with your Firebase config
-  const firebaseConfig = {
-  apiKey: "AIzaSyAzqZ_rEV_tnaGTuToh9sV_rPLcwWKSCA4",
-  authDomain: "iter-buddys.firebaseapp.com",
-  projectId: "iter-buddys",
-  storageBucket: "iter-buddys.firebasestorage.app",
-  messagingSenderId: "454713970037",
-  appId: "1:454713970037:web:e1061c64f7aec924b5973c",
-  measurementId: "G-JB27ZV06DQ"
-};
+    // 🔥 Your Firebase Config
+    const firebaseConfig = {
+      apiKey: "AIzaSyAzqZ_rEV_tnaGTuToh9sV_rPLcwWKSCA4",
+      authDomain: "iter-buddys.firebaseapp.com",
+      projectId: "iter-buddys",
+      storageBucket: "iter-buddys.firebasestorage.app",
+      messagingSenderId: "454713970037",
+      appId: "1:454713970037:web:e1061c64f7aec924b5973c",
+      measurementId: "G-JB27ZV06DQ"
+    };
 
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
 
+    // ✅ Email + Password Login
+    function loginWithEmail(e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      auth.signInWithEmailAndPassword(email, password)
+        .then((result) => {
+          alert("Logged in as: " + result.user.email);
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          alert("Error: " + error.message);
+        });
+    }
+
+    // ✅ Google Login
     function signInWithGoogle() {
       const provider = new firebase.auth.GoogleAuthProvider();
       auth.signInWithPopup(provider)
         .then((result) => {
-          const user = result.user;
-          alert("Logged in as: " + user.displayName);
-          // Optionally redirect:
-           window.location.href = "index.html";
+          alert("Logged in as: " + result.user.displayName);
+          window.location.href = "index.html";
         })
         .catch((error) => {
           alert("Error: " + error.message);
+        });
+    }
+
+    // ✅ Phone Number Login (Invisible reCAPTCHA)
+    let confirmationResult;
+
+    window.onload = () => {
+      window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+        size: 'invisible',
+        callback: () => {
+          console.log("Invisible reCAPTCHA verified ✅");
+        }
+      });
+    };
+
+    // Send OTP
+    function sendOTP() {
+      let phoneNumber = document.getElementById("phoneNumber").value.trim();
+
+      if (!phoneNumber.startsWith("+")) {
+        alert("❌ Phone number must be in international format, e.g. +919876543210");
+        return;
+      }
+
+      auth.signInWithPhoneNumber(phoneNumber, window.recaptchaVerifier)
+        .then((result) => {
+          confirmationResult = result;
+          alert("OTP sent!");
+          document.getElementById("otpSection").style.display = "block";
+        })
+        .catch((error) => {
+          alert("Error: " + error.message);
+        });
+    }
+
+    // Verify OTP
+    function verifyOTP() {
+      const code = document.getElementById("otpCode").value;
+      confirmationResult.confirm(code)
+        .then((result) => {
+          alert("Phone verified! Logged in as: " + result.user.phoneNumber);
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          alert("Invalid OTP: " + error.message);
         });
     }
   </script>

@@ -353,5 +353,28 @@
 
 
 <script src="script2.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAzqZ_rEV_tnaGTuToh9sV_rPLcwWKSCA4",
+    authDomain: "iter-buddys.firebaseapp.com",
+    projectId: "iter-buddys",
+    storageBucket: "iter-buddys.firebasestorage.app",
+    messagingSenderId: "454713970037",
+    appId: "1:454713970037:web:e1061c64f7aec924b5973c",
+    measurementId: "G-JB27ZV06DQ"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>
